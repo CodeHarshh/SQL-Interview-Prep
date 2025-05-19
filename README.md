@@ -19,6 +19,19 @@ CREATE TABLE worker (
     joining_date DATE,
     department CHAR(25)
 );
+
+INSERT INTO worker (first_name, last_name, salary, joining_date, department) VALUES
+('John', 'Doe', 50000, '2021-05-01', 'HR'),
+('Jane', 'Smith', 60000, '2020-03-15', 'Finance'),
+('Michael', 'Johnson', 55000, '2022-01-20', 'IT'),
+('Emily', 'Davis', 70000, '2019-07-10', 'Marketing'),
+('Chris', 'Brown', 45000, '2023-04-25', 'HR'),
+('Sarah', 'Wilson', 50000, '2021-11-30', 'Finance'),
+('David', 'Clark', 48000, '2022-08-05', 'IT'),
+('Anna', 'Taylor', 75000, '2018-12-01', 'Marketing'),
+('James', 'Anderson', 52000, '2020-09-15', 'HR'),
+('Laura', 'Moore', 68000, '2019-10-20', 'Finance');
+
 ````
 
 ### Bonus Table
@@ -30,6 +43,18 @@ CREATE TABLE bonus (
     bonus_date DATE,
     FOREIGN KEY (worker_ref_id) REFERENCES worker(worker_id) ON DELETE CASCADE
 );
+
+INSERT INTO bonus (worker_ref_id, bonus_amount, bonus_date) VALUES
+(1, 5000, '2022-12-25'),
+(2, 7000, '2022-11-30'),
+(3, 6000, '2023-01-15'),
+(4, 8000, '2022-10-20'),
+(5, 4000, '2023-03-01'),
+(6, 4500, '2022-07-10'),
+(7, 5000, '2023-02-14'),
+(8, 8500, '2022-05-30'),
+(9, 5200, '2023-04-05'),
+(10, 7500, '2022-09-15');
 ```
 
 ## Queries
