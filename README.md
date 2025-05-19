@@ -9,6 +9,8 @@ This document contains SQL queries based on various scenarios related to the `Wo
 
 ## Table Definitions
 
+
+````
 ### Worker Table
 ```sql
 CREATE TABLE worker (
